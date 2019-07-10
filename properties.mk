@@ -262,6 +262,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
+    debug.stagefright.c2inputsurface=-1 \
     persist.vendor.media.recorder.bt709=true
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
