@@ -26,7 +26,19 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function vendor_imports() {
+    cat << EOF >> "$1"
+		"device/motorola/hanoip",
+		"hardware/qcom-caf/sm8150",
+		"hardware/qcom-caf/wlan",
+		"vendor/qcom/opensource/commonsys/display",
+		"vendor/qcom/opensource/dataservices",
+		"vendor/qcom/opensource/display",
+EOF
+}
+
 # Initialize the helper for device
+source "${MY_DIR}/../../${VENDOR}/${DEVICE}/setup-makefiles.sh"
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 
 # Warning headers and guards
