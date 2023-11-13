@@ -138,10 +138,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.privapp.list=org.lineageos.aperture \
     vendor.camera.aux.packagelist=org.lineageos.aperture
 
-# Charger
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.charger.enable_suspend=true
-
 # Chipset
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=QTI \
