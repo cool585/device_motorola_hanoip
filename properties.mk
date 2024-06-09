@@ -374,6 +374,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.vendor.sensors.hal_trigger_ssr=true \
     persist.vendor.sensors.odl.adsp=true
 
+# SystemUI
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sysui.disableBlur=false
+
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.delta_time.enable=true
