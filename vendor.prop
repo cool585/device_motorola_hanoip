@@ -8,6 +8,7 @@ ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.set_display_power_timer_ms=1000
 
 # USB
+ro.usb.uvc.enabled=true
 sys.usb.mtp.batchcancel=1
 vendor.usb.controller=a600000.dwc3
 vendor.usb.diag.func.name=diag
