@@ -624,15 +624,52 @@
      <!-- Whether the new Auto Selection Network UI should be shown -->
      <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 
-    <!-- Doze: does this device support STATE_DOZE?  -->
-    <bool name="doze_display_state_supported">true</bool>
-
-    <!-- Fingerprint from stock ROM -->
-    <string name="config_stockFingerprint" translatable="false">motorola/hanoip_retail/hanoip:11/S2RI32.32-20-9-9-2/1591b:user/release-keys</string>
-
     <!-- Flag indicating whether the surfaceflinger has limited
          alpha compositing functionality in hardware.  If set, the window
          manager will disable alpha trasformation in animations where not
          strictly needed. -->
     <bool name="config_sf_limitedAlpha">true</bool>
+
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_supportSmartPixels">true</bool>
+
+    <!-- Whether device has turbo power charging support -->
+    <bool name="config_hasTurboPowerCharger">true</bool>
+
+    <!-- Any package that has one of the package names defined below will be prevented
+       from using specific sensors in order to stop battery drain -->
+    <string-array name="config_blockPackagesSensorDrain">
+        <item>com.whatsapp</item>
+        <item>com.gbwhatsapp</item>
+        <item>com.yowhatsapp</item>
+        <item>com.whatsapp.plus</item>
+        <item>org.telegram.messenger</item>
+        <item>org.telegram.messenger.plus</item>
+        <item>com.netease.cloudmusic</item>
+        <item>fm.xiami.main</item>
+        <item>com.netease.snailread</item>
+        <item>com.baidu.browser.apps</item>
+        <item>org.thunderdog.challegram</item>
+        <item>com.snapchat.android</item>
+        <item>com.facebook.orca</item>
+        <item>com.Slack</item>
+        <item>tugapower.codeaurora.browser</item>
+        <item>org.mozilla.firefox</item>
+        <item>com.android.chrome</item>
+        <item>com.amazon.mShop.android.shopping</item>
+        <item>com.google.android.inputmethod.latin</item>
+        <item>com.google.android.apps.plus</item>
+        <item>com.google.android.apps.maps</item>
+        <item>ru.ok.android</item>
+        <item>com.instagram.android.MainTabActivity</item>
+        <item>com.facebook.orca</item>
+        <item>com.facebook.orca.StartScreenActivity</item>
+        <item>com.spotify.music</item>
+        <item>com.spotify.music.MainActivity</item>
+        <item>com.android.vending</item>
+        <item>com.trtf.blue</item>
+        <item>com.truecaller</item>
+        <item>com.gaana</item>
+        <item>com.facebook.katana.LoginActivity</item>
+    </string-array>
 </resources>
