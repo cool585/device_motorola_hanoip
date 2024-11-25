@@ -34,7 +34,13 @@ PRODUCT_PACKAGES += \
     SystemUIResHanoip \
     TelephonyResHanoip
 
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage \
+    $(LOCAL_PATH)/overlay-lineage-fastbootd
+
 PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
 
 # A/B
 AB_OTA_UPDATER := true
