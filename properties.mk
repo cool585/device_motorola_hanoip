@@ -211,6 +211,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.force_brightness_capability=1 \
     debug.sf.disable_client_composition_cache=1 \
     debug.sf.enable_adpf_cpu_hint=true \
+    debug.sf.enable_gl_backpressure=1 \
     ro.opengles.version=196610 \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
     vendor.display.enable_default_color_mode=1 \
