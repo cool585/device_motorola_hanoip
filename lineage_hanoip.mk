@@ -28,6 +28,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # gms
 $(call inherit-product, vendor/gms/gms_mini.mk)
 WITH_GMS := true
+# Blur
+TARGET_ENABLE_BLUR := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_hanoip
