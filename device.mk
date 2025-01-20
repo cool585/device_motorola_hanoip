@@ -247,8 +247,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-service-qti \
     libbatching \
     libgeofencing \
-    libgnss \
-    libsynergy_loc_api
+    libgnss
 
 PRODUCT_PACKAGES += \
     apdr.conf \
