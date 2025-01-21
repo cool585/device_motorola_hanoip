@@ -247,7 +247,8 @@ PRODUCT_PACKAGES += \
     libbatching \
     libgeofencing \
     libgnss \
-    libgnsspps
+    libgnsspps \
+    libloc_socket
 
 PRODUCT_PACKAGES += \
     apdr.conf \
