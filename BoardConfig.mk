@@ -32,6 +32,20 @@ TARGET_2ND_CPU_VARIANT := cortex-a55
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
+# A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    vendor_boot \
+    dtbo \
+    product \
+    system \
+    system_ext \
+    vendor \
+    vbmeta \
+    vbmeta_system
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := hanoip
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
@@ -185,10 +199,6 @@ BOARD_SUPER_PARTITION_SIZE := 10804527104
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
-
-# Disable sparse for ext/f2fs images
-TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
-TARGET_USERIMAGES_SPARSE_F2FS_DISABLED := true
 
 # Recovery
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
