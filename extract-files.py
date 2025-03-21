@@ -56,6 +56,7 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'camera.mot.is.coming.cts', b'vendor.camera.coming.cts'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    'vendor/lib64/sensors.moto.so': blob_fixup().add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
