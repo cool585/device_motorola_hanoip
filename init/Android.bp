@@ -33,13 +33,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.mmi.usb.rc",
-    src: "init.mmi.usb.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.qcom.power.rc",
     src: "init.qcom.power.rc",
     sub_dir: "init/hw",

@@ -189,7 +189,6 @@ PRODUCT_PACKAGES += \
     init.mmi.laser.sh \
     init.mmi.overlay.rc \
     init.mmi.touch.sh \
-    init.mmi.usb.rc \
     init.mmi.usb.sh \
     init.oem.fingerprint.sh \
     init.oem.fingerprint2.sh \
@@ -204,6 +203,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
+    init.qcom.usb.sh \
     init.qti.ims.sh \
     init.recovery.qcom.rc \
     init.target.rc \
@@ -415,7 +415,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
-    hardware/qcom-caf/common/libqti-perfd-client
+    hardware/qcom-caf/common/libqti-perfd-client \
+    vendor/qcom/opensource/usb/etc
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile

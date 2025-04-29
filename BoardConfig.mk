@@ -59,7 +59,6 @@ BOARD_KERNEL_CMDLINE := \
     lpm_levels.sleep_disabled=1 \
     service_locator.enable=1 \
     swiotlb=1 \
-    androidboot.usbcontroller=a600000.dwc3 \
     earlycon=msm_geni_serial,0x880000 \
     loop.max_part=7 \
     printk.devkmsg=on \

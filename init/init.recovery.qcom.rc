@@ -27,6 +27,7 @@
 
 on init
     setprop sys.usb.configfs 1
+    setprop sys.usb.controller a600000.dwc3
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
