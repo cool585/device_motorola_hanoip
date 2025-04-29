@@ -25,12 +25,16 @@ $(call inherit-product, device/motorola/hanoip/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# extras
+# Extras
 # gms
 $(call inherit-product, vendor/gms/gms_mini.mk)
 WITH_GMS := true
+
 # Blur
 TARGET_ENABLE_BLUR := true
+
+#WebCam
+TARGET_BUILD_DEVICE_AS_WEBCAM := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_hanoip
