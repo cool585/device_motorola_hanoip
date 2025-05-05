@@ -370,10 +370,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sysui.disableBlur=false
 
-# Time
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.delta_time.enable=true
-
 # WiFi
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     config.disable_rtt=true
