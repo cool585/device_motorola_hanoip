@@ -330,6 +330,7 @@ on charger
 # translate MMI property in order to keep the consistent with QCOM
 on property:ro.vendor.hw.dualsim=true
    setprop persist.radio.multisim.config dsds
+   setprop ro.telephony.sim_slots.count 2
 
 on property:ro.vendor.hw.dualsim=false
    setprop persist.radio.multisim.config ""
