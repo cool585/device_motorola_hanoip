@@ -197,7 +197,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=0 \
-    debug.mdpcomp.logs=0 \
     debug.sf.hw=0 \
     debug.sf.auto_latch_unsignaled=0 \
     persist.demo.hdmirotationlock=false \
