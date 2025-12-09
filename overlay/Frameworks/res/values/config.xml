@@ -653,5 +653,8 @@
     <integer name="device_idle_motion_inactive_to_ms">0</integer>
     <integer name="device_idle_idle_after_inactive_to_ms">15000</integer>
 
+    <!-- Whether WM DisplayContent supports high performance transitions
+         (lower-end devices may want to disable) -->
+    <bool name="config_deviceSupportsHighPerfTransitions">false</bool>
 </resources>
 
