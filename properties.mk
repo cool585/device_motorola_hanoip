@@ -346,6 +346,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.wcg_composition_dataspace=143261696 \
     ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.game_default_frame_rate_override=120 \
     ro.surface_flinger.enable_frame_rate_override=false
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
