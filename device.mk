@@ -364,10 +364,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
-# QMI
-PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti.vendor # Needed by CNE app
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.va_aosp.support=1
 
