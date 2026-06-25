@@ -176,10 +176,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     android.frameworks.displayservice@1.0.vendor
 
-# ConfigStore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Init
 PRODUCT_PACKAGES += \
     init.class_main.sh \
