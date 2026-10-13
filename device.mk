@@ -62,9 +62,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Dolby
-$(call inherit-product, hardware/motorola/dolby/setup.mk)
-
 # Properties
 -include $(LOCAL_PATH)/properties.mk
 
