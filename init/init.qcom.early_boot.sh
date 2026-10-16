@@ -27,7 +27,15 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-export PATH=/vendor/bin
+export PATH=/vendor/bin:/system/bin:$PATH
+
+# Create missing BPF map for libmeminfo ReadProcessGpuUsageKb (Android 17 on 4.14 kernel)
+if [ ! -f /sys/fs/bpf/map_gpuMem_gpu_mem_total_map ]; then
+    bpftool map create /sys/fs/bpf/map_gpuMem_gpu_mem_total_map type hash key 8 value 8 entries 1024 name gpu_mem_total_m
+    chmod 666 /sys/fs/bpf/map_gpuMem_gpu_mem_total_map
+    chown root:graphics /sys/fs/bpf/map_gpuMem_gpu_mem_total_map
+    chcon u:object_r:fs_bpf:s0 /sys/fs/bpf/map_gpuMem_gpu_mem_total_map
+fi
 
 # Set platform variables
 if [ -f /sys/devices/soc0/hw_platform ]; then

@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+# BPF
+PRODUCT_PACKAGES += \
+    bpftool
+
 # Partitions
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
