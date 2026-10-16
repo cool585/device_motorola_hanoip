@@ -27,9 +27,6 @@
 on early-init && property:ro.boot.hardware.sku=XT2135-1
     setprop ro.boot.product.hardware.sku nfc
 
-on early-init && property:ro.boot.hardware.sku=XT2135-2
-    setprop ro.boot.product.hardware.sku nfc
-
 on boot && property:ro.boot.product.hardware.sku=nfc
     start vendor.nfc_hal_service
 
