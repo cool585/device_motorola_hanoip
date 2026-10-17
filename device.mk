@@ -33,6 +33,10 @@ $(call inherit-product, vendor/motorola/hanoip/hanoip-vendor.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# BPF
+PRODUCT_PACKAGES += \
+    bpftool
+
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResHanoip \
