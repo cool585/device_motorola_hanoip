@@ -63,3 +63,7 @@
 
 # Thermal
 /dev/mmi_sys_temp                                       u:object_r:thermal_device:s0
+
+# Graphics
+/(vendor|system/vendor)/lib(64)?/.*libgpudataproducer\.so                                    u:object_r:same_process_hal_file:s0
+
