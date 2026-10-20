@@ -196,6 +196,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.renderengine.blur_algorithm=kawase_darkmoon \
     debug.sf.auto_latch_unsignaled=0 \
     persist.sys.sf.color_saturation=1.0 \
     persist.sys.sf.native_mode=1 \
