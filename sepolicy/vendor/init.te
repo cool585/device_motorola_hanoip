@@ -19,3 +19,6 @@ allow init mnt_product_file:dir mounton;
 
 # Wlan firmware
 allow init firmware_file:file mounton;
+
+# Allow init to write to discard_max_bytes
+allow init vendor_sysfs_mmc_host:file w_file_perms;
