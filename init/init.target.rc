@@ -79,11 +79,6 @@ on late-fs
     write /sys/block/dm-9/queue/read_ahead_kb 2048
 
 on post-fs-data
-    mkdir /data/tombstones 0771 system system
-    mkdir /tombstones/modem 0771 system system
-    mkdir /tombstones/lpass 0771 system system
-    mkdir /tombstones/wcnss 0771 system system
-    mkdir /tombstones/dsps 0771 system system
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /persist/qti_fp 0700 system system
     mkdir /data/vendor/nnhal 0700 system system

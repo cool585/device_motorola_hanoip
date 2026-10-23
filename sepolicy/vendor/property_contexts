@@ -59,3 +59,6 @@ vendor.hw.fingerprint.status                   u:object_r:vendor_mot_fingerprint
 
 # Motorola touch
 vendor.hw.touch.           u:object_r:vendor_mot_touch_prop:s0
+
+# Bluetooth
+persist.vendor.bt.a2dp.aac_whitelist            u:object_r:vendor_bluetooth_prop:s0

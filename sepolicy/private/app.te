@@ -1,2 +1,5 @@
 # Allow appdomain to get vendor_persist_camera_prop
 get_prop(appdomain, vendor_persist_camera_prop)
+
+# Allow appdomain and shell to access Zygote USAP pool socket
+allow { appdomain shell } zygote:unix_stream_socket { getopt getattr };
