@@ -63,7 +63,8 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Dolby
-$(call inherit-product, hardware/motorola/dolby/setup.mk)
+TARGET_INCLUDES_OEM_App := true
+$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
 
 # Properties
 -include $(LOCAL_PATH)/properties.mk
@@ -404,6 +405,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
 	$(LOCAL_PATH) \
+    hardware/dolby \
     hardware/google/interfaces \
     hardware/google/pixel/power-libperfmgr \
     hardware/lineage/interfaces/power-libperfmgr \

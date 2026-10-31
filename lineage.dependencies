@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "github",
+    "repository": "swiitch-OFF-Lab/hardware_dolby",
+    "target_path": "hardware/dolby",
+    "branch": "moto-A17"
+  }
+]
