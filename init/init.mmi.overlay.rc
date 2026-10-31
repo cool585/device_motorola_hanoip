@@ -27,6 +27,18 @@ on boot
    chown system system /sys/class/capsense/reset
    chown system system /sys/class/capsense/int_state
 
+   # Change ownership for touch gesture
+   chown system system /sys/class/sensors/dt-gesture/enable
+   chmod 0660 /sys/class/sensors/dt-gesture/enable
+   chown system system /sys/class/sensors/dt-gesture/poll_delay
+   chmod 0660 /sys/class/sensors/dt-gesture/poll_delay
+
+   # Change ownership for touch palm
+   chown system system /sys/class/sensors/palm-gesture/enable
+   chmod 0660 /sys/class/sensors/palm-gesture/enable
+   chown system system /sys/class/sensors/palm-gesture/poll_delay
+   chmod 0660 /sys/class/sensors/palm-gesture/poll_delay
+
    # Change the ownership of display TE files for tcmds
    chown root oem_5004 /sys/class/graphics/fb0/te_test
    chown root oem_5004 /sys/class/graphics/fb0/te_enable
