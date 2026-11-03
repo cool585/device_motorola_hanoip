@@ -823,6 +823,167 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
 
+    <carrier_config cid="802">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+        <boolean name="hide_preferred_network_type_bool" value="false" />
+        <boolean name="world_mode_enabled_bool" value="true" />
+        <boolean name="world_phone_bool" value="true" />
+        <boolean name="apn_expand_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <string-array name="non_roaming_operator_string_array" num="2">
+            <item value="404" />
+            <item value="405" />
+        </string-array>
+    </carrier_config>
+
+    <carrier_config cid="2378">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+        <boolean name="hide_preferred_network_type_bool" value="false" />
+        <boolean name="world_mode_enabled_bool" value="true" />
+        <boolean name="world_phone_bool" value="true" />
+        <boolean name="apn_expand_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <string-array name="non_roaming_operator_string_array" num="2">
+            <item value="404" />
+            <item value="405" />
+        </string-array>
+    </carrier_config>
+
+    <carrier_config mcc="404">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="405">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="405" mnc="845">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="405" mnc="846">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="405" mnc="847">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="405" mnc="848">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="405" mnc="849">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="405" mnc="850">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="405" mnc="851">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="405" mnc="852">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="405" mnc="853">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="405" mnc="875">
+        <boolean name="carrier_default_data_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
+
+
     <carrier_config mcc="405" mnc="840">
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
