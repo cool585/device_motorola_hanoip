@@ -226,6 +226,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.vt_avail_ovr=1  \
     persist.dbg.wfc_avail_ovr=1
 
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.ims.cam_sensor_delay=20 \
+    persist.vendor.ims.disableDebugDataPathLogs=1 \
+    persist.vendor.ims.disableDebugLogs=1 \
+    persist.vendor.ims.disableIMSLogs=1 \
+    persist.vendor.ims.display_delay=40 \
+    persist.vendor.ims.playout_delay=50 \
+    persist.vendor.ims.vt.enableadb=1 \
+    persist.vendor.vt.supported=1
+
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.qcom.ims.use_moto_vt_ext=true
 
@@ -296,8 +306,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.build.vendorprefix=/vendor \
-    ro.vendor.radio.imei.sv=22 \
+    ro.vendor.radio.imei.sv=24 \
     persist.vendor.data.iwlan.enable=true \
+    persist.radio.start_ota_daemon=1 \
+    persist.vendor.radio.jbims=1 \
+    persist.vendor.radio.start_ota_daemon=1 \
+    persist.vendor.sys.cnd.iwlan=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.data_ltd_sys_ind=1 \

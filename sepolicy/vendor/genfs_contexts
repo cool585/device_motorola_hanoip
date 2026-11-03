@@ -53,6 +53,8 @@ genfscon sysfs /module/stmvl53l1                                                
 
 # Motorola
 genfscon proc /bootinfo                                                         u:object_r:proc_moto_boot:s0
+genfscon proc /config                                                           u:object_r:proc_moto_boot:s0
+genfscon proc /hw                                                               u:object_r:proc_moto_boot:s0
 
 # Touch
 genfscon sysfs /devices/platform/soc/a80000.spi/spi_master/spi2/spi2.0          u:object_r:vendor_sysfs_touch:s0
