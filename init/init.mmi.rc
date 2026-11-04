@@ -42,7 +42,6 @@ on early-init
     setprop ro.vendor.hw.modelno ${ro.boot.modelno}
     setprop ro.vendor.hw.revision ${ro.boot.revision}
     setprop ro.vendor.hw.nav_keys ${ro.boot.nav_keys}
-    setprop ro.vendor.hw.dualsim ${ro.boot.dualsim}
     setprop ro.product.vendor.device ${ro.vendor.product.device}
     setprop ro.product.vendor.name ${ro.vendor.product.name}
     setprop ro.product.vendor.model ${ro.vendor.product.model}
@@ -327,6 +326,11 @@ on charger
     class_stop late_start
 
 # translate MMI property in order to keep the consistent with QCOM
+on property:ro.boot.dualsim=true
+   setprop ro.vendor.hw.dualsim true
+   setprop persist.radio.multisim.config dsds
+   setprop ro.telephony.sim_slots.count 2
+
 on property:ro.vendor.hw.dualsim=true
    setprop persist.radio.multisim.config dsds
    setprop ro.telephony.sim_slots.count 2

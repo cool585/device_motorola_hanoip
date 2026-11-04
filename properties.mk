@@ -293,7 +293,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.build.vendorprefix=/vendor \
     ro.vendor.radio.imei.sv=22 \
     persist.vendor.data.iwlan.enable=true \
@@ -316,7 +316,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sw_mbn_update=0 \
     persist.vendor.radio.sar_sensor=1 \
     persist.vendor.radio.fi_supported=0 \
-    persist.vendor.radio.rat_on=other \
+    persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.hidl_dev_service=1 \
     persist.vendor.lte.pco_supported=true \
     persist.vendor.radio.enableadvancedscan=true \
@@ -334,9 +334,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     DEVICE_PROVISIONED=1 \
     persist.sys.fflag.override.settings_provider_model=false \
-    ril.subscription.types=NV,RUIM \
-    ro.telephony.default_network=33,33 \
-    telephony.lteOnCdmaDevice=1,1
+    ro.telephony.default_network=9,9
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
