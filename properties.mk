@@ -159,8 +159,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat64.enabled=true \
+    dalvik.vm.heapgrowthlimit=256m \
     dalvik.vm.heapmaxfree=8m \
-    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapminfree=4m \
     dalvik.vm.heapsize=512m \
     dalvik.vm.heapstartsize=8m \
     dalvik.vm.heaptargetutilization=0.75
@@ -377,3 +378,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     zygote.critical_window.minute=10
+
+# zRAM
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.zram.mark_idle_delay_mins=60
