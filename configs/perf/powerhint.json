@@ -204,7 +204,9 @@
       "Values": [
         "0",
         "1"
-      ]
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
     }
   ],
   "Actions": [
