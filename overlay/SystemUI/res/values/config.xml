@@ -25,7 +25,39 @@
     <integer name="config_cpuTempDivider" translatable="true">1000</integer>
 
     <!-- FPSInfoService FPS node file path -->
-    <string name="config_fpsInfoSysNode" translatable="false">/sys/class/drm/sde-crtc-0/measured_fps</string>
+    <string name="config_fpsInfoSysNode" translatable="true">/sys/class/drm/sde-crtc-0/measured_fps</string>
+
+    <!-- Update battery wattage, voltage, and current every second while on charger -->
+    <bool name="config_alternateFastchargeInfoUpdate">true</bool>
+
+    <!-- TurboPower Animated Lockscreen Charging -->
+    <bool name="config_useCustomChargingAnim">true</bool>
+    <integer name="config_chargingAnimMode">1</integer>
+    <integer name="config_chargingAnimDimAlpha">140</integer>
+    <integer name="config_chargingAnimLowBatteryThreshold">20</integer>
+
+    <!-- Themed Pill Battery Style (Android 15 / 16 aesthetics) -->
+    <bool name="config_themedBatteryPillStyle">true</bool>
+    <bool name="config_themedBatteryPillOutline">true</bool>
+    <bool name="config_themedBatteryPillNub">true</bool>
+    <bool name="config_themedBatteryPercentWhileCharging">true</bool>
+
+    <!-- CPU Temperature Monitoring (SM6150 SoC thermal zone 0) -->
+    <string name="config_cpuTempSensor" translatable="true">/sys/class/thermal/thermal_zone0/temp</string>
+
+    <!-- SM6150 CPU Topology: 6x Cortex-A55 (cores 0-5), 2x Cortex-A76 (cores 6-7) -->
+    <string name="config_displayCpus" translatable="true">0,1,2,3,4,5,6,7</string>
+
+    <!-- LCD Display Optimizations -->
+    <bool name="config_systemBarBurnInProtection">false</bool>
+    <bool name="config_udfpsMtkGhbmDimming">false</bool>
+    <bool name="config_disableSmartPixelsOnUDFPS">false</bool>
+
+    <!-- Both devices are 4G LTE only (Snapdragon 730/732G); hide 5G VoNR toggle -->
+    <bool name="config_supportsVONR">false</bool>
+
+    <!-- Keep software corner decorations disabled unless HWC crashes -->
+    <bool name="config_disableHwcScreenDecoration">false</bool>
 
     <!-- Whether to play turbulence noise after clicking the play button -->
     <bool name="config_turbulenceNoise">false</bool>
