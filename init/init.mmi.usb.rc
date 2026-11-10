@@ -27,56 +27,82 @@
 
 on init
     mount configfs none /config
-    mkdir /config/usb_gadget/g1 0770
-    mkdir /config/usb_gadget/g2 0770
-    mkdir /config/usb_gadget/g1/strings/0x409 0770
-    mkdir /config/usb_gadget/g2/strings/0x409 0770
+    chown system usb /config/usb_gadget/
+    mkdir /config/usb_gadget/g1 0770 system usb
+    mkdir /config/usb_gadget/g2 0770 system usb
+    chown system usb /config/usb_gadget/g1/UDC
+    chown system usb /config/usb_gadget/g1/bDeviceClass
+    chown system usb /config/usb_gadget/g1/bDeviceProtocol
+    chown system usb /config/usb_gadget/g1/bDeviceSubClass
+    chown system usb /config/usb_gadget/g1/bMaxPacketSize0
+    chown system usb /config/usb_gadget/g1/bcdDevice
+    chown system usb /config/usb_gadget/g1/bcdUSB
+    chown system usb /config/usb_gadget/g1/configs
+    chown system usb /config/usb_gadget/g1/functions
+    chown system usb /config/usb_gadget/g1/idProduct
+    chown system usb /config/usb_gadget/g1/idVendor
+    chown system usb /config/usb_gadget/g1/max_speed
+    chown system usb /config/usb_gadget/g1/os_desc
+    chown system usb /config/usb_gadget/g1/strings
+    mkdir /config/usb_gadget/g1/strings/0x409 0770 system usb
+    chown system usb /config/usb_gadget/g1/strings/0x409/manufacturer
+    chown system usb /config/usb_gadget/g1/strings/0x409/product
+    chown system usb /config/usb_gadget/g1/strings/0x409/serialnumber
+    mkdir /config/usb_gadget/g2/strings/0x409 0770 system usb
     write /config/usb_gadget/g1/bcdUSB 0x0200
     write /config/usb_gadget/g2/bcdUSB 0x0200
     write /config/usb_gadget/g1/os_desc/use 1
-    mkdir /config/usb_gadget/g1/functions/usbnet.usb0
-    mkdir /config/usb_gadget/g1/functions/mass_storage.0
-    mkdir /config/usb_gadget/g1/functions/mtp.gs0
-    mkdir /config/usb_gadget/g1/functions/ptp.gs1
-    mkdir /config/usb_gadget/g1/functions/accessory.gs2
-    mkdir /config/usb_gadget/g1/functions/audio_source.gs3
-    mkdir /config/usb_gadget/g1/functions/midi.gs5
-    mkdir /config/usb_gadget/g1/functions/ffs.adb
-    mkdir /config/usb_gadget/g1/functions/ffs.diag
-    mkdir /config/usb_gadget/g1/functions/ffs.diag_mdm
-    mkdir /config/usb_gadget/g1/functions/ffs.diag_mdm2
-    mkdir /config/usb_gadget/g1/functions/diag.diag
-    mkdir /config/usb_gadget/g1/functions/diag.diag_mdm
-    mkdir /config/usb_gadget/g1/functions/diag.diag_mdm2
-    mkdir /config/usb_gadget/g1/functions/cser.dun.0
-    mkdir /config/usb_gadget/g1/functions/cser.nmea.1
-    mkdir /config/usb_gadget/g1/functions/cser.dun.2
-    mkdir /config/usb_gadget/g1/functions/gsi.rmnet
-    mkdir /config/usb_gadget/g1/functions/gsi.rndis
-    mkdir /config/usb_gadget/g1/functions/gsi.dpl
-    mkdir /config/usb_gadget/g1/functions/qdss.qdss
-    mkdir /config/usb_gadget/g1/functions/qdss.qdss_mdm
-    mkdir /config/usb_gadget/g1/functions/rndis_bam.rndis
-    mkdir /config/usb_gadget/g1/functions/rndis.rndis
-    mkdir /config/usb_gadget/g1/functions/rmnet_bam.rmnet
-    mkdir /config/usb_gadget/g1/functions/rmnet_bam.dpl
-    mkdir /config/usb_gadget/g1/functions/rmnet_bam.rmnet_bam_dmux
-    mkdir /config/usb_gadget/g1/functions/rmnet_bam.dpl_bam_dmux
-    mkdir /config/usb_gadget/g1/functions/ncm.0
-    mkdir /config/usb_gadget/g1/functions/ccid.ccid
-    mkdir /config/usb_gadget/g1/functions/uac2.0
-    mkdir /config/usb_gadget/g1/functions/uvc.0
-    mkdir /config/usb_gadget/g1/configs/b.1 0770
-    mkdir /config/usb_gadget/g2/configs/b.1 0770
-    mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770
-    mkdir /config/usb_gadget/g2/configs/b.1/strings/0x409 0770
+    mkdir /config/usb_gadget/g1/functions/usbnet.usb0 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/mass_storage.0 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/mtp.gs0 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/ptp.gs1 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/accessory.gs2 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/audio_source.gs3 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/midi.gs5 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/ffs.adb 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/ffs.diag 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/ffs.diag_mdm 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/ffs.diag_mdm2 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/diag.diag 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/diag.diag_mdm 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/diag.diag_mdm2 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/cser.dun.0 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/cser.nmea.1 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/cser.dun.2 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/gsi.rmnet 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/gsi.rndis 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/gsi.dpl 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/qdss.qdss 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/qdss.qdss_mdm 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/rndis_bam.rndis 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/rndis.rndis 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/rmnet_bam.rmnet 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/rmnet_bam.dpl 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/rmnet_bam.rmnet_bam_dmux 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/rmnet_bam.dpl_bam_dmux 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/ncm.0 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/ccid.ccid 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/uac2.0 0770 system usb
+    mkdir /config/usb_gadget/g1/functions/uvc.0 0770 system usb
+    mkdir /config/usb_gadget/g1/configs/b.1 0770 system usb
+    chown system usb /config/usb_gadget/g1/configs/b.1/MaxPower
+    chown system usb /config/usb_gadget/g1/configs/b.1/bmAttributes
+    chown system usb /config/usb_gadget/g1/configs/b.1/strings
+    mkdir /config/usb_gadget/g2/configs/b.1 0770 system usb
+    mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770 system usb
+    chown system usb /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration
+    mkdir /config/usb_gadget/g2/configs/b.1/strings/0x409 0770 system usb
     write /config/usb_gadget/g1/configs/b.1/MaxPower 900
     write /config/usb_gadget/g1/os_desc/b_vendor_code 0x1
     write /config/usb_gadget/g1/os_desc/qw_sign "MSFT100"
     symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
+    chown system usb /config/usb_gadget/g1/os_desc/b.1
+    chown system usb /config/usb_gadget/g1/os_desc/b_vendor_code
+    chown system usb /config/usb_gadget/g1/os_desc/qw_sign
+    chown system usb /config/usb_gadget/g1/os_desc/use
     mkdir /dev/usb-ffs 0775 shell system
-    mkdir /dev/usb-ffs/adb 0770 shell shell
-    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000,rmode=0770,fmode=0660
+    mkdir /dev/usb-ffs/adb 0770 shell system
+    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=1000,rmode=0770,fmode=0660
     mkdir /dev/ffs-diag 0770 shell system
     mount functionfs diag /dev/ffs-diag uid=2000,gid=1000,rmode=0770,fmode=0660,no_disconnect=1
     mkdir /dev/ffs-diag-1 0770 shell system
@@ -88,12 +114,29 @@ on init
     chmod 0660 /sys/class/android_usb/android0/secure
 
 on boot && property:vendor.usb.use_ffs_mtp=1
-   mkdir /config/usb_gadget/g1/functions/ffs.mtp
-   mkdir /config/usb_gadget/g1/functions/ffs.ptp
+   mkdir /config/usb_gadget/g1/functions/ffs.mtp 0770 system usb
+   mkdir /config/usb_gadget/g1/functions/ffs.ptp 0770 system usb
    mkdir /dev/usb-ffs/mtp 0770 mtp mtp
    mount functionfs mtp /dev/usb-ffs/mtp rmode=0770,fmode=0660,uid=1024,gid=1024,no_disconnect=1
    mkdir /dev/usb-ffs/ptp 0770 mtp mtp
    mount functionfs ptp /dev/usb-ffs/ptp rmode=0770,fmode=0660,uid=1024,gid=1024,no_disconnect=1
+
+on boot && property:vendor.usb.use_gadget_hal=1
+    setprop sys.usb.controller ${vendor.usb.controller}
+    setprop sys.usb.configfs 2
+
+on boot && property:ro.usb.uvc.enabled=true
+    setprop vendor.usb.uvc.function.init 1
+
+on property:sys.usb.config=* && property:sys.usb.configfs=2
+    setprop vendor.usb.config ${sys.usb.config}
+
+on property:vendor.usb.config=* && property:sys.usb.configfs=2
+    start usbd
+
+on property:vendor.usb.controller=* && property:vendor.usb.use_gadget_hal=0
+    setprop sys.usb.controller ${vendor.usb.controller}
+    setprop sys.usb.configfs 1
 
 #  This is a good place to write these, since system props would be loaded.
 on firmware_mounts_complete
@@ -475,7 +518,6 @@ on property:sys.usb.config=diag,serial_cdev,rmnet,adb && property:sys.usb.config
 on boot
     chown root system /sys/module/uvcvideo/parameters/quirks
     chmod 0660 /sys/module/uvcvideo/parameters/quirks
-    setprop sys.usb.configfs 1
 
 on property:sys.usb.config=accessory && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x18d1
@@ -694,3 +736,40 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=diag,diag_mdm,qdss,qd
    symlink /config/usb_gadget/g1/functions/mass_storage.0  /config/usb_gadget/g1/configs/b.1/f7
    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f8
    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
+
+on property:vendor.usb.uvc.function.init=1
+    write /config/usb_gadget/g1/functions/uvc.0/function_name "Android Webcam"
+    write /config/usb_gadget/g1/functions/uvc.0/streaming_maxpacket 1024
+    write /config/usb_gadget/g1/functions/uvc.0/streaming_maxburst 2
+    # setup control params
+    mkdir /config/usb_gadget/g1/functions/uvc.0/control/header/h
+    symlink /config/usb_gadget/g1/functions/uvc.0/control/header/h /config/usb_gadget/g1/functions/uvc.0/control/class/fs/h
+    symlink /config/usb_gadget/g1/functions/uvc.0/control/header/h /config/usb_gadget/g1/functions/uvc.0/control/class/ss/h
+    # advertise mjpeg streams
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m
+    # advertise 720p resolution for webcam encoded as mjpeg
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/wHeight 720
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/wWidth 1280
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwMaxVideoFrameBufferSize 1843200
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwDefaultFrameInterval 333333
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwFrameInterval "166666
+333333
+416666
+666666"
+    # advertise 1080p resolution for webcam encoded as mjpeg
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/wHeight 1080
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/wWidth 1920
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwMaxVideoFrameBufferSize 4147200
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwDefaultFrameInterval 333333
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwFrameInterval "166666
+333333
+416666
+666666"
+    # setup streaming params
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/header/h
+    symlink /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m /config/usb_gadget/g1/functions/uvc.0/streaming/header/h/m
+    symlink /config/usb_gadget/g1/functions/uvc.0/streaming/header/h /config/usb_gadget/g1/functions/uvc.0/streaming/class/fs/h
+    symlink /config/usb_gadget/g1/functions/uvc.0/streaming/header/h /config/usb_gadget/g1/functions/uvc.0/streaming/class/hs/h
+    symlink /config/usb_gadget/g1/functions/uvc.0/streaming/header/h /config/usb_gadget/g1/functions/uvc.0/streaming/class/ss/h

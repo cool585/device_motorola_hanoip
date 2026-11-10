@@ -290,6 +290,13 @@ if [ "$diag_extra" == "" ]; then
 fi
 
 #
+# Initialize UVC configuration.
+#
+if [ -d /config/usb_gadget/g1/functions/uvc.0 ] && [ "$(getprop vendor.usb.uvc.function.init)" != "1" ]; then
+        setprop vendor.usb.uvc.function.init 1
+fi
+
+#
 # Allow USB enumeration with default PID/VID
 #
 usb_config=`getprop persist.vendor.usb.config`

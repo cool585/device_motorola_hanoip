@@ -172,6 +172,8 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     vendor.qti.hardware.camera.device@1.0.vendor
 
+TARGET_BUILD_DEVICE_AS_WEBCAM := true
+
 # Init
 PRODUCT_PACKAGES += \
     init.class_main.sh \
@@ -456,7 +458,9 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service.dual_role_usb
+    android.hardware.usb@1.3-service.dual_role_usb \
+    android.hardware.usb.gadget-service.qti \
+    usb_compositions.conf
 
 # VNDK
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
