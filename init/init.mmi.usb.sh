@@ -421,6 +421,10 @@ case "$bootmode" in
         esac
     ;;
     * )
+        if [ "$(getprop vendor.usb.use_gadget_hal)" == "1" ]; then
+            exit 0
+        fi
+
         if [ "$buildtype" == "user" ] && [ "$phonelock_type" != "1" ] && [ "$usb_restricted" != "1" ]
         then
             echo 1 > /sys/class/android_usb/android0/secure
@@ -452,7 +456,7 @@ case "$bootmode" in
         adb_early=`getprop ro.boot.adb_early`
         if [ "$adb_early" == "1" ]; then
             echo 0 > /sys/class/android_usb/android0/secure
-            log_info "Enabling enumeration after bootup, count =  $count !"
+            log_info "Enabling enumeration after bootup!"
             new_persist_usb_config=`getprop persist.vendor.usb.config`
             if [[ "$new_persist_usb_config" != *adb* ]]; then
                 setprop persist.vendor.usb.config "adb"
@@ -467,7 +471,7 @@ case "$bootmode" in
         then
             count=0
             bootcomplete=`getprop vendor.boot_completed`
-            log_info "mmi-usb-sh - bootcomplete = $booted"
+            log_info "mmi-usb-sh - bootcomplete = $bootcomplete"
             while [ "$bootcomplete" != "1" ]; do
                 log_dbg "Sleeping till bootup!"
                 sleep 1
