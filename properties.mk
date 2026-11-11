@@ -396,6 +396,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.usb.use_gadget_hal=1
 
 PRODUCT_VENDOR_PROPERTIES += \
+    ro.usb.uvc.disable_video_encode_flag=true \
     ro.usb.uvc.enabled=true
 
 # WiFi
