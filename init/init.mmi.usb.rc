@@ -803,6 +803,10 @@ on property:sys.usb.config=uvc && property:sys.usb.configfs=1
 
 on property:vendor.usb.uvc.function.init=1
     write /config/usb_gadget/g1/functions/uvc.0/function_name "Android Webcam"
+    # Max payload transfer size reported in the UVC probe/commit response.
+    # DeviceAsWebcam reads this property; without it the app sends 0 and the
+    # host fails the control transfer when it re-negotiates the stream.
+    setprop vendor.usb.uvc.payload_transfer_size 1024
     write /config/usb_gadget/g1/functions/uvc.0/streaming_maxpacket 1024
     write /config/usb_gadget/g1/functions/uvc.0/streaming_maxburst 2
     # setup control params
