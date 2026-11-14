@@ -266,8 +266,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.media.recorder.bt709=true
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
-    ro.config.avoid_gfx_accel=true
+    media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     av.offload.enable=true \
