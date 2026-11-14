@@ -381,6 +381,22 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sysui.disableBlur=false
 
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.usb.mtp.batchcancel=1 \
+    vendor.usb.controller=a600000.dwc3 \
+    vendor.usb.diag.func.name=diag \
+    vendor.usb.dpl.inst.name=dpl \
+    vendor.usb.qdss.inst.name=qdss \
+    vendor.usb.rmnet.func.name=gsi \
+    vendor.usb.rmnet.inst.name=rmnet \
+    vendor.usb.rndis.func.name=gsi \
+    vendor.usb.use_ffs_mtp=1 \
+    vendor.usb.use_gadget_hal=1
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.usb.uvc.enabled=true
+
 # WiFi
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     config.disable_rtt=true
