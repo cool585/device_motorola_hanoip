@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2026 The Android Open Source Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<config>
+    <hidden-api-whitelisted-app package="com.motorola.camera" />
+    <hidden-api-whitelisted-app package="com.motorola.camera2" />
+    <hidden-api-whitelisted-app package="com.motorola.camera5" />
+    <hidden-api-whitelisted-app package="com.motorola.cameraone" />
+</config>
