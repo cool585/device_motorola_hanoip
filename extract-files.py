@@ -20,7 +20,6 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/motorola/hanoip',
-    'hardware/dolby',
     'hardware/motorola',
     'hardware/qcom/sm8150/gps',
     'hardware/qcom-caf/sm8150',

@@ -61,8 +61,9 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Dolby
-TARGET_INCLUDES_OEM_App := true
-$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
+# The vendored runtime provides both the DAP effects and the Codec2 store.
+# It also builds LunarisDolby, so it must not be added here as well.
+$(call inherit-product, $(LOCAL_PATH)/dolby/dolby.mk)
 
 # Properties
 -include $(LOCAL_PATH)/properties.mk
@@ -406,7 +407,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
 	$(LOCAL_PATH) \
-    hardware/dolby \
     hardware/google/interfaces \
     hardware/google/pixel/power-libperfmgr \
     hardware/lineage/interfaces/power-libperfmgr \

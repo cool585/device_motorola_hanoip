@@ -5,7 +5,6 @@
 
 soong_namespace {
     imports: [
-        "hardware/dolby",
         "hardware/google/interfaces",
         "hardware/google/pixel",
         "hardware/lineage/interfaces/power-libperfmgr",
