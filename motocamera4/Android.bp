@@ -30,7 +30,6 @@ android_app_import {
     },
     privileged: true,
     product_specific: true,
-    skip_preprocessed_apk_checks: true,
     enforce_uses_libs: false,
     overrides: [
         "Aperture",
@@ -62,7 +61,6 @@ android_app_import {
     },
     privileged: true,
     product_specific: true,
-    skip_preprocessed_apk_checks: true,
     enforce_uses_libs: false,
     required: [
         "com.motorola.camera3.content.ai",
@@ -80,7 +78,6 @@ android_app_import {
     },
     privileged: true,
     product_specific: true,
-    skip_preprocessed_apk_checks: true,
     enforce_uses_libs: false,
     required: [
         "com.motorola.photoeditor",
@@ -96,7 +93,6 @@ android_app_import {
     dex_preopt: {
         enabled: false,
     },
-    skip_preprocessed_apk_checks: true,
     enforce_uses_libs: false,
     required: [
         "com.motorola.motosignature",
@@ -112,7 +108,6 @@ android_app_import {
     dex_preopt: {
         enabled: false,
     },
-    skip_preprocessed_apk_checks: true,
     enforce_uses_libs: false,
 }
 
