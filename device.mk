@@ -173,6 +173,14 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     vendor.qti.hardware.camera.device@1.0.vendor
 
+# Moto Camera 4
+$(call inherit-product, $(LOCAL_PATH)/motocamera4/motocamera4.mk)
+
+# Override stock AOSP camera & Aperture
+PRODUCT_PACKAGES_REMOVE += \
+    Aperture \
+    Camera2
+
 TARGET_BUILD_DEVICE_AS_WEBCAM := true
 
 # Init

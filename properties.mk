@@ -132,8 +132,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.physical.num=5 \
-    persist.vendor.camera.privapp.list=org.lineageos.aperture \
-    vendor.camera.aux.packagelist=org.lineageos.aperture
+    persist.vendor.camera.privapp.list=org.lineageos.aperture,com.motorola.camera3,com.motorola.camera2 \
+    vendor.camera.aux.packagelist=org.lineageos.aperture,com.motorola.camera3,com.motorola.camera2 \
+    vendor.camera.aux.packagelist2=com.motorola.ccc,com.android.settings,com.motorola.motocit \
+    ro.camera.cfa.packagelist=com.motorola.coresettingsext,com.motorola.camera3,com.motorola.actions \
+    ro.mot.build.customerid=global
 
 # Chipset
 PRODUCT_PROPERTY_OVERRIDES += \
