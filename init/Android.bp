@@ -3,9 +3,46 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-// Hanoip-only init files. The shared SM6150 init scripts (init.qcom.rc,
-// init.mmi.rc, init.target.rc, ueventd.rc, ...) are provided by sm6150-common
-// and select hanoip's sources via the `hanoip` soong_config bool.
+// Hanoip-specific init files. Byte-identical init scripts are provided by
+// sm6150-common and not duplicated here. The files below diverge from common
+// (or are hanoip-only), so they live in the device tree; because
+// device/motorola/hanoip is parsed before device/motorola/sm6150-common, these
+// same-named modules shadow the common ones for hanoip builds.
+prebuilt_etc {
+    name: "init.mmi.rc",
+    src: "init.mmi.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.power.rc",
+    src: "init.qcom.power.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "init.qcom.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.qcom.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.rc",
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "init.hanoip.rc",
     src: "init.hanoip.rc",
@@ -17,6 +54,18 @@ prebuilt_etc {
     name: "init.mmi.overlay.rc",
     src: "init.mmi.overlay.rc",
     sub_dir: "init/hw",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.class_main.sh",
+    src: "init.class_main.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "init.qcom.early_boot.sh",
     vendor: true,
 }
 

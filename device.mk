@@ -87,7 +87,6 @@ PRODUCT_PACKAGES += \
     init.oem.fingerprint2.sh
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_hanoip)
-$(call soong_config_set_bool,motorola_sm6150,hanoip,true)
 
 # Fstab
 # Hanoip uses a virtual A/B fstab; common's fstab copy is skipped for hanoip.
