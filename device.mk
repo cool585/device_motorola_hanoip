@@ -108,7 +108,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.hanoip
+    android.hardware.lights-service.sm6150
 
 # NFC
 PRODUCT_PACKAGES += \
