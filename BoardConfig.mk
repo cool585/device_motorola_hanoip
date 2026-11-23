@@ -73,17 +73,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 
-# Dolby
-# These are board variables and must be set here, not in the product-scope
-# dolby.mk where they would be ignored. The C2 store registers the
-# IComponentStore/default1 instance, alongside the default one above.
-DEVICE_MANIFEST_FILE += \
-    $(DEVICE_PATH)/dolby/vendor.dolby.hardware.dms@2.0-service.xml \
-    $(DEVICE_PATH)/dolby/vendor.dolby.media.c2.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    $(DEVICE_PATH)/dolby/dolby_framework_matrix.xml
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/dolby/sepolicy/vendor
-
 # NFC / ODM
 ODM_MANIFEST_SKUS := nfc
 ODM_MANIFEST_NFC_FILES := device/motorola/hanoip/odm_manifest_nfc.xml
