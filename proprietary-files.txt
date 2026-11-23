@@ -270,8 +270,6 @@ vendor/bin/qrtr-lookup
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/mutualex.rc
 
-# Radio - IMS (APK)
-system_ext/priv-app/ims/ims.apk|e9c94334635124dbd73bfa321166152b3b0e43f8
 
 # Radio - Moto Telephony Framework
 

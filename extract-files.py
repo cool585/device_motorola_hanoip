@@ -24,6 +24,7 @@ namespace_imports = [
     'hardware/qcom/sm8150/gps',
     'hardware/qcom-caf/sm8150',
     'hardware/qcom-caf/wlan',
+    'vendor/motorola/sm6150-common',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
@@ -68,5 +69,5 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == '__main__':
-    utils = ExtractUtils.device(module)
+    utils = ExtractUtils.device_with_common(module, 'sm6150-common', module.vendor)
     utils.run()

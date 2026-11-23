@@ -6,8 +6,8 @@
 // Hanoip-specific init files. Byte-identical init scripts are provided by
 // sm6150-common and not duplicated here. The files below diverge from common
 // (or are hanoip-only), so they live in the device tree; because
-// device/motorola/hanoip is parsed before device/motorola/sm6150-common, these
-// same-named modules shadow the common ones for hanoip builds.
+// device/motorola/hanoip precedes sm6150-common in PRODUCT_SOONG_NAMESPACES,
+// these same-named modules shadow the common ones for hanoip builds.
 prebuilt_etc {
     name: "init.mmi.rc",
     src: "init.mmi.rc",

@@ -21,6 +21,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Soong namespaces (hanoip takes precedence over common)
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # Inherit from the common SM6150 tree
 $(call inherit-product, device/motorola/sm6150-common/common.mk)
 
@@ -73,13 +77,17 @@ PRODUCT_PACKAGES_DEBUG += \
 $(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # Init
-# Shared SM6150 init scripts come from common; the `hanoip` soong_config bool
-# selects hanoip's diverged sources there. Only hanoip-only scripts are listed.
+# Shared SM6150 init scripts come from common; diverged scripts are shadowed
+# in the device tree via PRODUCT_SOONG_NAMESPACES precedence.
 PRODUCT_PACKAGES += \
     init.hanoip.rc \
     init.mmi.overlay.rc \
     init.oem.fingerprint.sh \
     init.oem.fingerprint2.sh
+
+# Telephony / IMS
+PRODUCT_PACKAGES += \
+    ims
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_hanoip)
 
@@ -144,7 +152,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.art_lowmem=true
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
