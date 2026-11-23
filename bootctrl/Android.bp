@@ -15,14 +15,14 @@
 //
 
 filegroup {
-    name: "bootctrl_hal_src",
+    name: "bootctrl_hal_src_hanoip",
     srcs: [
         "boot_control.cpp",
     ],
 }
 
 cc_defaults {
-    name: "bootctrl_hal_defaults",
+    name: "bootctrl_hal_defaults_hanoip",
     proprietary: true,
     recovery_available: true,
     header_libs: [
@@ -41,14 +41,14 @@ cc_defaults {
         "-Werror",
     ],
     srcs: [
-        ":bootctrl_hal_src",
+        ":bootctrl_hal_src_hanoip",
     ],
 
 }
 
 cc_library_shared {
-    name: "android.hardware.boot@1.2-impl-qti",
+    name: "android.hardware.boot@1.2-impl-qti-hanoip",
     stem: "android.hardware.boot@1.0-impl-1.2-qti",
     defaults: ["android.hardware.boot@1.2-impl-qti_defaults"],
-    static_libs: ["libgptutils.motorola_sm6150"],
+    static_libs: ["libgptutils.motorola_hanoip"],
 }
