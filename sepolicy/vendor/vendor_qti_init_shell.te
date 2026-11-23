@@ -1,17 +1,2 @@
-get_prop(vendor_qti_init_shell, vendor_mot_boot_prop)
-set_prop(vendor_qti_init_shell, vendor_mot_boot_prop)
-get_prop(vendor_qti_init_shell, vendor_mot_touch_prop)
+# Hanoip delta over sm6150-common (vendor/vendor_qti_init_shell.te)
 set_prop(vendor_qti_init_shell, vendor_mot_hw_prop)
-set_prop(vendor_qti_init_shell, vendor_mot_touch_prop)
-allow vendor_qti_init_shell vendor_sysfs_laser:dir r_dir_perms;
-allow vendor_qti_init_shell vendor_sysfs_laser:file { setattr rw_file_perms };
-allow vendor_qti_init_shell sysfs_android_usb:dir r_dir_perms;
-allow vendor_qti_init_shell sysfs_android_usb:file rw_file_perms;
-allow vendor_qti_init_shell kmsg_device:chr_file { open write };
-allow vendor_qti_init_shell vendor_file:file execute_no_trans;
-allow vendor_qti_init_shell vendor_file:system module_load;
-allow vendor_qti_init_shell vendor_sysfs_touch:dir r_dir_perms;
-allow vendor_qti_init_shell vendor_sysfs_touch:file { setattr rw_file_perms };
-r_dir_file(vendor_qti_init_shell, fsg_firmware_file)
-allow vendor_qti_init_shell proc_moto_boot:dir r_dir_perms;
-allow vendor_qti_init_shell proc_moto_boot:file rw_file_perms;

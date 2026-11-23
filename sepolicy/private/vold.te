@@ -1,1 +1,0 @@
-allow vold mnt_product_file:dir search;

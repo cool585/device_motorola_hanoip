@@ -1,4 +1,3 @@
-get_prop(system_app, vendor_persist_camera_prop);
-
+# Hanoip delta over sm6150-common (private/system_app.te)
 binder_call(system_app, storaged)
 binder_call(system_app, system_suspend)
