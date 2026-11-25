@@ -1,0 +1,2 @@
+motocamera/product/priv-app/MotCamera4-hanoip/MotCamera4-hanoip.apk filter=lfs diff=lfs merge=lfs -text
+motocamera/product/app/MotoPhotoEditor/MotoPhotoEditor.apk filter=lfs diff=lfs merge=lfs -text

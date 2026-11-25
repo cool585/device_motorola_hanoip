@@ -175,6 +175,9 @@ PRODUCT_PACKAGES += \
 
 TARGET_BUILD_DEVICE_AS_WEBCAM := true
 
+# Moto Camera 4
+$(call inherit-product, $(LOCAL_PATH)/motocamera/motocamera.mk)
+
 # Init
 PRODUCT_PACKAGES += \
     init.class_main.sh \
@@ -407,6 +410,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
 	$(LOCAL_PATH) \
+	$(LOCAL_PATH)/motocamera \
     hardware/google/interfaces \
     hardware/google/pixel/power-libperfmgr \
     hardware/lineage/interfaces/power-libperfmgr \
