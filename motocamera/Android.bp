@@ -65,22 +65,20 @@ android_app_import {
     name: "MotoSignatureApp",
     owner: "motorola",
     apk: "MotoSignatureApp/MotoSignatureApp.apk",
-    certificate: "platform",
+    presigned: true,
     dex_preopt: {
         enabled: false,
     },
-    presigned: true,
 }
 
 android_app_import {
     name: "MotoSignature2App",
     owner: "motorola",
     apk: "MotoSignature2App/MotoSignature2App.apk",
-    certificate: "platform",
+    presigned: true,
     dex_preopt: {
         enabled: false,
     },
-    presigned: true,
 }
 
 prebuilt_etc {
