@@ -66,6 +66,7 @@ android_app_import {
     owner: "motorola",
     apk: "MotoSignatureApp/MotoSignatureApp.apk",
     presigned: true,
+    preprocessed: true,
     dex_preopt: {
         enabled: false,
     },
@@ -76,6 +77,7 @@ android_app_import {
     owner: "motorola",
     apk: "MotoSignature2App/MotoSignature2App.apk",
     presigned: true,
+    preprocessed: true,
     dex_preopt: {
         enabled: false,
     },
