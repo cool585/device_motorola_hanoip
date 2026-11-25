@@ -19,3 +19,7 @@ allow hal_camera_default vendor_xdsp_device:chr_file read;
 # Props
 get_prop(hal_camera_default, vendor_mot_boot_prop)
 set_prop(hal_camera_default, vendor_mot_boot_prop)
+
+# Vidhance EIS reads the gyroscope through android.frameworks.sensorservice@1.0,
+# which system_server hosts
+binder_call(hal_camera_default, system_server)

@@ -1,0 +1,2 @@
+# Moto Camera reads ro.boot.hwrev and ro.boot.secure_hardware
+get_prop(priv_app, vendor_mot_boot_prop)
