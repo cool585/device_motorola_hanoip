@@ -22,8 +22,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.lens.oem_camera_package=com.motorola.camera3
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.privapp.list=org.lineageos.aperture,com.motorola.camera3 \
-    vendor.camera.aux.packagelist=org.lineageos.aperture,com.motorola.camera3
+    persist.vendor.camera.privapp.list=com.motorola.camera3 \
+    vendor.camera.aux.packagelist=com.motorola.camera3
 
 # Hidden API/sysconfig for Moto Camera
 PRODUCT_COPY_FILES += \

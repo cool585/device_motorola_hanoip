@@ -24,7 +24,6 @@ android_app_import {
         "moto-settings",
     ],
     overrides: [
-        "Aperture",
         "Camera",
         "Camera2",
         "Snap",
