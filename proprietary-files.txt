@@ -183,6 +183,7 @@ vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libvidhance.so
+vendor/lib64/libvidhance_stabilizer.so
 
 # Camera (Arcsoft)
 vendor/etc/camera/aec_golden_depth.bin
